@@ -1,0 +1,39 @@
+<section class="container py-5 text-center">
+<h2 class="fw-bold">Why Choose us</h2>
+<p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate</p>
+
+<div class="row mt-4">
+<div class="col-md-3" *ngFor="let item of features">
+    <img
+    [src]="item.icon"
+    [alt]="item.title"
+    class="feature-icon" />
+<i class="bi bi-geo-alt fs-1 text-primary"></i>
+<h6 class="mt-2">{{item.title}}</h6>
+<p>{{item.desc}}</p>
+</div>
+</div>
+</section>
+<section class="services bg-color text-white py-5">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h2 class="fw-bold">Services</h2>
+<p class="text-size">Borem ipsum dolor sit amet,<br> consectetur adipiscing elit. Nunc</p>
+</div>
+
+
+<div class="col-md-3">
+    <div class="card bg-transparent text-center p-4">
+        <img src="/assets/sd.svg" alt="service">
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="card bg-transparent text-center p-4">
+        <img src="/assets/ab.png" alt="service">
+    </div>
+</div>
+
+</div>
+</div>
+</section>

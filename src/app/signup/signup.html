@@ -1,0 +1,111 @@
+<div class="login-wrapper w-100">
+
+  <div class="login-card">
+
+    <h3 class="text-center fw-bold mb-4 text-white">
+      Sign Up Using Number Or Email
+    </h3>
+
+    <mat-tab-group [selectedIndex]="1" >
+  <mat-tab style="color: white !important;" label="Mobile" [disabled]="true">
+    <div class="mb-3 mt-2">
+      <label class="form-label text-white">Mobile Number</label>
+      <input class="form-control mb-2"
+           placeholder="Email"
+           [(ngModel)]="signupData.email">
+
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label text-white">Password</label>
+     <input class="form-control mb-3"
+           type="password"
+           placeholder="Confirm Password"
+           [(ngModel)]="signupData.password">
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Email">
+       <div class="mb-3 mt-2">
+      <label class="form-label text-white">Email Address</label>
+      <input class="form-control custom-input mb-2"
+           placeholder="Email"
+           [(ngModel)]="signupData.email">
+
+    </div>
+
+    <div class="mb-2">
+  <label class="form-label text-white">Password</label>
+
+  <div class="password-wrapper">
+    <input
+      class="form-control custom-input"
+      [type]="showConfirmPassword ? 'text' : 'password'"
+      placeholder="Password"
+      [(ngModel)]="signupData.password"
+    />
+
+    <mat-icon
+      class="password-eye"
+      (click)="toggleConfirmPassword()"
+    >
+      {{ showConfirmPassword ? 'visibility_off' : 'visibility' }}
+    </mat-icon>
+  </div>
+</div>
+
+ <div class="mb-2">
+  <label class="form-label text-white">Confirm Password</label>
+
+  <div class="password-wrapper">
+    <input
+      class="form-control custom-input"
+      [type]="showConfirmPassword ? 'text' : 'password'"
+      placeholder="Confirm Password"
+      [(ngModel)]="signupData.Cpassword"
+    />
+
+    <mat-icon
+      class="password-eye"
+      (click)="toggleConfirmPassword()"
+    >
+      {{ showConfirmPassword ? 'visibility_off' : 'visibility' }}
+    </mat-icon>
+  </div>
+</div>
+  </mat-tab>
+
+   
+</mat-tab-group>
+
+<button class="btn btn-primary w-100"
+            [disabled]="loading"
+            (click)="signup()">
+      {{ loading ? 'Signing up...' : 'Signup' }}
+    </button>
+
+
+
+    <div class="divider">Or</div>
+
+    <div class="social-buttons">
+      <button class="social google">Continue with Google</button>
+      <button class="social apple">Continue with Apple</button>
+      <button class="social facebook">Continue with Facebook</button>
+      <button class="social twitter">Continue with Twitter</button>
+    </div>
+
+    <p class="terms text-center mt-3">
+      By proceeding further you agree to our
+      <a href="#">Terms & conditions</a> and
+      <a href="#">Privacy policy</a>
+    </p>
+
+    <!-- <p class="text-center mt-3 text-white">
+      Don’t have an account?
+      <a routerLink="/signup" class="signup-link">Sign up</a>
+    </p> -->
+
+  </div>
+</div>
+

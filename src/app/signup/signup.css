@@ -1,0 +1,268 @@
+/* Background */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(rgba(0,0,0,.4), rgba(144, 114, 114, 0.4)),
+url('/assets/heroback.svg') center/cover no-repeat;
+}
+
+/* Card */
+.login-card {
+  width: 500px;
+  max-width: 90%;
+  background: rgba(20, 30, 80, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  color: #fff;
+}
+
+/* Inputs */
+.custom-input {
+  
+   background: transparent;
+  border: 1px solid #1D7BD8; /* optional */
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+.password-eye {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+  font-size: 22px;
+}
+.custom-input::placeholder {
+  color: #f5f6ff;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.custom-input {
+  padding-right: 44px; /* space for eye icon */
+}
+
+.password-eye {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+  font-size: 22px;
+  user-select: none;
+}
+
+.custom-input:focus {
+  background: #676a7e;
+  box-shadow: none;
+  color: #fff;
+}
+
+/* Login Button */
+.btn-login {
+  background: #1D7BD8;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+}
+
+/* Links */
+.forgot-link {
+  font-size: 13px;
+  color: #9db0ff;
+  text-decoration: none;
+}
+
+.signup-link {
+  color: #4aa3ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  font-size: 12px;
+  color: #eff1ff;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #f5f6ff;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.social {
+  background: transparent;
+  border: 1px solid #5a66c5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.social.google { border-color: #ffffff; }
+.social.apple { border-color: #ffffff; }
+.social.facebook { border-color: #ffffff; }
+.social.twitter { border-color: #ffffff; }
+
+.social:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Terms */
+.terms {
+  font-size: 11px;
+  color: #bfc7ff;
+}
+
+.terms a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px;
+  }
+}
+
+:host {
+  font-family: var(--inter-font);
+  display: flex;
+  justify-content: center;
+}
+[ngTabs] {
+  overflow: hidden;
+  width: 600px;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--bright-blue) 5%, transparent);
+}
+[ngTabList] {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid color-mix(in srgb, var(--primary-contrast) 20%, transparent);
+}
+[ngTab] {
+  flex: 1;
+  outline: none;
+  padding: 1rem 0;
+  cursor: pointer;
+  text-align: center;
+  color: color-mix(in srgb, var(--primary-contrast) 60%, transparent);
+}
+[ngTab]:focus {
+  outline-offset: -8px;
+  border-radius: 0.7rem;
+  outline: 2px solid var(--bright-blue);
+}
+[ngTab]:hover {
+  background-color: color-mix(in srgb, var(--primary-contrast) 5%, transparent);
+}
+[ngTab][aria-selected='true'] {
+  color: var(--bright-blue);
+}
+.bottom-border {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: calc(100% / 3);
+  background-color: var(--bright-blue);
+  transition: all 0.2s ease-in-out;
+  transform: translateX(0%);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+[ngTab]:nth-child(1)[aria-selected='true'] ~ .bottom-border {
+  transform: translateX(0%);
+}
+[ngTab]:nth-child(2)[aria-selected='true'] ~ .bottom-border {
+  transform: translateX(100%);
+}
+[ngTab]:nth-child(3)[aria-selected='true'] ~ .bottom-border {
+  transform: translateX(200%);
+}
+.sliding-window {
+  width: 300%;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+[ngTabList]:has([ngTab]:nth-child(1)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(0%);
+}
+[ngTabList]:has([ngTab]:nth-child(2)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(-33.333%);
+}
+[ngTabList]:has([ngTab]:nth-child(3)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(-66.666%);
+}
+[ngTabPanel] {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  min-height: 100px;
+  flex: 1;
+}
+[ngTabPanel]:focus {
+  outline-offset: -4px;
+  border-radius: 0.5rem;
+  outline: 2px solid var(--bright-blue);
+}
+
+::ng-deep .mdc-tab.mdc-tab--active{
+  background-color: rgb(17, 112, 255) !important;
+  color: white !important;
+   border-radius: 0px 10px 10px 0px !important;
+}
+
+.app-header {
+  background: transparent;
+  padding: 0 8px;
+}
+
+.logo {
+  height: 36px;
+  margin-left: 8px;
+}

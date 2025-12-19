@@ -1,0 +1,87 @@
+
+
+<div class="login-wrapper w-100">
+
+  <div class="login-card">
+
+    <h3 class="text-center fw-bold mb-4 text-white">
+      Log In Using Number Or Email
+    </h3>
+
+    <mat-tab-group [selectedIndex]="1" >
+  <mat-tab label="Mobile" [disabled]="true">
+    <div class="mb-3 mt-2">
+      <label class="form-label text-white">Mobile Number</label>
+      <input
+        class="form-control custom-input"
+        placeholder="Email"
+        [(ngModel)]="loginData.email">
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label text-white">Password</label>
+      <input
+        class="form-control custom-input"
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="loginData.password">
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Email">
+       <div class="mb-3 mt-2">
+      <label class="form-label text-white">Email Address</label>
+      <input
+        class="form-control custom-input"
+        placeholder="Email"
+        [(ngModel)]="loginData.email">
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label text-white">Password</label>
+      <input
+        class="form-control custom-input"
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="loginData.password">
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+    <div class="text-end mb-3">
+      <a href="/forgot" class="forgot-link text-white">Forgot Password?</a>
+    </div>
+
+    <button
+      class="btn btn-login w-100"
+      [disabled]="loading"
+      (click)="login()">
+      {{ loading ? 'Logging in...' : 'LOG IN' }}
+    </button>
+
+    <div class="divider">Or</div>
+
+    <div class="social-buttons">
+      <button class="social google">Continue with Google</button>
+      <button class="social apple">Continue with Apple</button>
+      <button class="social facebook">Continue with Facebook</button>
+      <button class="social twitter">Continue with Twitter</button>
+    </div>
+
+    <p class="terms text-center mt-3">
+      By proceeding further you agree to our
+      <a href="#">Terms & conditions</a> and
+      <a href="#">Privacy policy</a>
+    </p>
+
+    <!-- <p class="text-center mt-3 text-white">
+      Don’t have an account?
+      <a routerLink="/signup" class="signup-link">Sign up</a>
+    </p> -->
+
+  </div>
+</div>
+

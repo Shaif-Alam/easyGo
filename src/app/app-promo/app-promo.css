@@ -1,0 +1,22 @@
+.footer {
+  background-color: #fff;
+}
+
+.footer h6 {
+  margin-bottom: 12px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.store-btn {
+  max-width: 160px;
+}

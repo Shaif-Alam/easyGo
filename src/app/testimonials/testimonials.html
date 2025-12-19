@@ -1,0 +1,20 @@
+<section class="container py-5 text-center">
+  <h2 class="fw-bold">What Our Customer Says</h2>
+  <p>Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  <div class="row mt-4">
+    @for (t of testimonials; track t.name) {
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <p class="text-light-emphasis">{{ t.msg }}</p>
+           <p>{{ t.title }}</p>
+          <strong>{{ t.name }}</strong>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<div>
+  <img src="assets/mans.png" class="w-100" alt="logo">
+</div>
