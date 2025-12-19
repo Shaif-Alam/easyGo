@@ -14,6 +14,9 @@ AuthService
   styleUrl: './signup.css',
 })
 export class Signup {
+    goBack() {
+  window.history.back();
+}
   showConfirmPassword = false;
 
 toggleConfirmPassword() {

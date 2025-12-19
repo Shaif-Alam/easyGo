@@ -1,13 +1,36 @@
 /* Background */
 .login-wrapper {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-background: linear-gradient(rgba(0,0,0,.4), rgba(144, 114, 114, 0.4)),
-url('/assets/heroback.svg') center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(144, 114, 114, 0.4)),
+              url('/assets/heroback.svg') center/cover no-repeat;
 }
 
+/* Back button on top-left */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Make sure it's above background */
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+
+.micon{
+   color: white;
+   cursor: pointer;
+}
+.micon:hover{
+   color: #5a66c5;
+}
+
+.login-we{
+   min-height: 100vh;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Card */
 .login-card {
   width: 500px;
@@ -30,35 +53,9 @@ url('/assets/heroback.svg') center/cover no-repeat;
   border-radius: 8px;
   padding: 10px;
 }
-.password-eye {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #fff;
-  font-size: 22px;
-}
+
 .custom-input::placeholder {
   color: #f5f6ff;
-}
-.password-wrapper {
-  position: relative;
-}
-
-.custom-input {
-  padding-right: 44px; /* space for eye icon */
-}
-
-.password-eye {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #fff;
-  font-size: 22px;
-  user-select: none;
 }
 
 .custom-input:focus {
