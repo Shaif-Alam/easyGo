@@ -1,13 +1,35 @@
 /* Background */
 .login-wrapper {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-background: linear-gradient(rgba(0,0,0,.4), rgba(144, 114, 114, 0.4)),
-url('/assets/heroback.svg') center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,.4), rgba(144, 114, 114, 0.4)),
+              url('/assets/heroback.svg') center/cover no-repeat;
 }
 
+/* Back button on top-left */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Make sure it's above background */
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+.micon{
+   color: white;
+   cursor: pointer;
+}
+.micon:hover{
+   color: #5a66c5;
+}
+
+.login-we{
+   min-height: 100vh;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Card */
 .login-card {
   width: 500px;
